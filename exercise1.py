@@ -7,8 +7,7 @@ from math import isclose
 
 class Vector:
     def __init__(self, coordinates: List[float]) -> None:
-        # self._coordinates = coordinates.copy()
-        self._coordinates = coordinates # Task A
+        self._coordinates = coordinates.copy()
 
     def __getitem__(self, i: int) -> float:
         return self._coordinates[i]
@@ -24,7 +23,7 @@ class Vector:
         assert len(self._coordinates) == len(other._coordinates)
         return Vector([self[i] - other[i] for i in range(len(self._coordinates))])
 
-
+# Task A: 
 def test_vector_index_access() -> None:
     for index in [0, 1, 2, 3]:
         reference = [float(i) for i in range(4)]
@@ -35,7 +34,6 @@ def test_vector_index_access() -> None:
 
         # Task A: make this test pass by ensuring that `Vector` uses a copy of the coordinates it receives in the constructor
         assert reference[index] != 42.0
-
 
 def test_3d_vector_addition() -> None:
     v = Vector([1.0, 2.0, 3.0]) + Vector([1.1, 2.2, 3.3])
