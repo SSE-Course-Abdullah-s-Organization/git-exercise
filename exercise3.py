@@ -83,3 +83,4 @@ def test_rectangle_contains_tolerance() -> None:
     assert rectangle.contains(upper_left, tolerance=eps*2.0)
     assert rectangle.contains(lower_right, tolerance=eps*2.0)
     assert rectangle.contains(upper_right, tolerance=eps*2.0)
+    
