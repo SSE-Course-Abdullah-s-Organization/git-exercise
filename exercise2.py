@@ -14,10 +14,12 @@ class Point2D:
     def y(self) -> float:
         return self._coordinates[1]
 
-    #def __iadd__(self, other: Vector) -> None:
-    #    self._coordinates += other
-    #    return self
-
+# Task A:
+    def __iadd__(self, other: Vector) -> None:
+        self._coordinates += other
+        return self
+      
+# Task B:
     def __isub__(self, other: Vector) -> None:
         self._coordinates -= other
         return self
